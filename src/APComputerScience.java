@@ -19,6 +19,8 @@ public class APComputerScience {
             String[] line;
             while(in.hasNext()) {
                 line = in.nextLine().split(",");
+                classList.add(new Student(line[0],line[1],Integer.parseInt(line[2]),
+                        Integer.parseInt(line[3]),Double.parseDouble(line[4]), line[5]));
             }
         }
         catch(Exception e)  {
@@ -29,12 +31,12 @@ public class APComputerScience {
     public void printRoster()   {
         for(Student s : classList)
             System.out.println(s);
-        int throwaway = classList.get(0).getAge(true);
+        //int throwaway = classList.get(0).getAge(true);
     }
 
     public static void main(String[] args) {
         APComputerScience dPeriod = new APComputerScience();
-        dPeriod.addStudent(new Student("Ani", "Sukhija", 12, 18, 4.1, "Julian Cochran"));
+        /*dPeriod.addStudent(new Student("Ani", "Sukhija", 12, 18, 4.1, "Julian Cochran"));
         dPeriod.addStudent(new Student("Issie", "Scurria", 11, 16, 4.05, "Owen Bryant"));
         dPeriod.addStudent(new Student("Ryan", "Bauroth", 10, 15, 4.23, "Julian Cochran"));
         dPeriod.addStudent(new Student("Bef", "Steinberg", 11, 18, 4.78, "Julian Cochran"));
@@ -48,6 +50,9 @@ public class APComputerScience {
         String word2 = new String(word1);
 
         //dPeriod.printRoster();
-        //dPeriod.printRoster();
+        //dPeriod.printRoster();*/
+
+        dPeriod.loadDataFile("roster.csv");
+        dPeriod.printRoster();
     }
 }
