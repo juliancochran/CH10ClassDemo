@@ -34,10 +34,13 @@ public class APComputerScience {
         //int throwaway = classList.get(0).getAge(true);
     }
 
+    public boolean containsStudent(Student s)   {
+        return classList.indexOf(s) >= 0;
+    }
+
     public static void main(String[] args) {
         APComputerScience dPeriod = new APComputerScience();
-        /*dPeriod.addStudent(new Student("Ani", "Sukhija", 12, 18, 4.1, "Julian Cochran"));
-        dPeriod.addStudent(new Student("Issie", "Scurria", 11, 16, 4.05, "Owen Bryant"));
+        /*dPeriod.addStudent(new Student("Issie", "Scurria", 11, 16, 4.05, "Owen Bryant"));
         dPeriod.addStudent(new Student("Ryan", "Bauroth", 10, 15, 4.23, "Julian Cochran"));
         dPeriod.addStudent(new Student("Bef", "Steinberg", 11, 18, 4.78, "Julian Cochran"));
 
@@ -54,5 +57,7 @@ public class APComputerScience {
 
         dPeriod.loadDataFile("roster.csv");
         dPeriod.printRoster();
+        Student temp = new Student("Ani", "Sukhija", 12, 18, 4.1, "Bryant");
+        System.out.println(temp+" located in D period APCS: " + dPeriod.containsStudent(temp));
     }
 }

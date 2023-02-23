@@ -75,10 +75,10 @@ public class Student {
     }
 
     public String toString()    {
-        return lastName + ", " + firstName + " grade " + grade + " age " + age + " your mom is awesome.";
+        return lastName + ", " + firstName + " (" + advisor + ")" + " grade " + grade + " age " + age;
     }
 
-    public boolean equals(Object other) {
+    /*public boolean equals(Object other) {
         if(other instanceof Student)    {
             Student temp = (Student)other;
             boolean same = lastName.equals(temp.lastName) && firstName.equals(temp.firstName);
@@ -89,14 +89,13 @@ public class Student {
         }
         else
             return false;
-    }
+    }*/
+
+    /*public boolean equals(Student other) {
+        boolean same = lastName.equals(other.lastName) && firstName.equals(other.firstName);
+        if(same)
+            return this.advisor.equals(other.advisor);
+        else
+            return same;
+    }*/
 }
-
-
-
-
-
-
-
-
-
